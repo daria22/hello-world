@@ -1,0 +1,17 @@
+<?php
+
+function isInputCorrect($connect,$requete,$mail,$password)
+	{
+		$req = $connect->query($requete);
+		foreach($req as $donnees)
+		{
+			if($mail == $donnees['Login'] && $password == $donnees['Password'])
+			{
+				return true;
+			}			
+		}
+		return false;
+	}
+
+}
+?>
