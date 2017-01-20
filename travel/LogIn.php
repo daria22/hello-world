@@ -30,7 +30,7 @@ session_start();
     <h1>Log-in</h1><br>
   <form method = "POST" action = "Controller.php?action=log_in">
     <input type="text" name="Login" placeholder="Username">
-    <input type="password" name="Password" placeholder="Password">
+	 <input type="password" name="Password" placeholder="Password">
     <input type="submit" name="login" class="login login-submit" value="Login">
   </form>
 	

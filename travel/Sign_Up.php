@@ -13,14 +13,18 @@ function isMailExist($connect,$requete,$mail)
 		}
 		return true;
 	}
-function isPasswordCorrect()
+function isPasswordCorrect($passLenght)
 {
-	$passLenght = strlen($_POST[Password]);
-if($passLenght < 6)
-	return false;
-else 
-return true;	
+	return strlen($passLenght)>=6;
 }
+function isNumberCorrect($numberPhone)
+{
+	if(ereg("^[0-9]{1,12}$",$numberPhone) && strlen($numberPhone) > 5)
+		return true;
+	else 
+		return false;
+}
+
 ?>
 
 

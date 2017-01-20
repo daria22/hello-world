@@ -3,15 +3,19 @@ session_start();
 	
 	if($_SESSION['Password'] == "False" || $_SESSION['Number'] == "False")
 	{
- echo 
- '<div class = "login-card">';
+	
+	
  if($_SESSION['Password'] == "False")
- echo'
- <p>Password must be longer than 6 symbols </><p> Please try again.</p>';
- else if( $_SESSION['Number'] == "False")
-	echo'<p>Number must be longer than 10 symbols</><p> Please try again.</p>';
-  echo '</div>';	
+ {	
+echo'<div class = "login-card">
+ <p>Password must be longer than 6 symbols </><p> Please try again.</p>	</div>';
+ }
+  else if( $_SESSION['Number'] == "False")
+	echo'<div class = "login-card">
+	<p>Number must be longer than 10 symbols</><p> Please try again.</p>	</div>';
+	
 	}
+	
 	
 ?> 
 <!DOCTYPE html>
@@ -31,9 +35,9 @@ session_start();
     <h1>Sign-Up</h1><br>
   <form method = "POST" action = "Controller.php?action=sign_up">
     <input type="text" name="Name" placeholder="Name">
-	<input type="text" name="Login" placeholder="Email">
-	 <input type="text" name="Number" placeholder="Number(+380661488306)">
-    <input type="password" name="Password" placeholder="Password">
+	<input type="text" name="Number" placeholder="Number(+380661488306)">
+    <input type="text" name="Login" placeholder="Email">
+	<input type="password" name="Password" placeholder="Password">
     <input type="submit" name="Done" class="login login-submit" value="Sign-Up">
   </form>
 	
